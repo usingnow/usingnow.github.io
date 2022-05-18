@@ -36,4 +36,4 @@ tags: 代码发布 GitHub
 - Actions 在运行中需要同时有读写权限，而 Github Actions 的设置在默认的情况下，仅有只读权限。如果看到这样的报错，可以在设置中打开写权限。
 ![image.png](https://cdn.nlark.com/yuque/0/2022/png/27640265/1652540206204-af7f4c56-88c8-4ffc-ad5f-212de3eb21a8.png)
 
-第一次代码发布已完成，接下来我们尝试在企业门户中撰写第一篇博客。
+第一次代码发布已完成，接下来我们尝试在企业门户中[撰写第一篇博客](https://usingnow.github.io/posts/create-a-new-blog/)。
