@@ -197,3 +197,12 @@ jekyll-archives:
   permalinks:
     tag: /tags/:name/
     category: /categories/:name/
+
+# Jekyll compose template
+jekyll_compose:
+  default_front_matter:
+    posts:
+      layout: post
+      img_path: /assets/img/
+      categories:
+      tags:
