@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Github",
+    "link": "https://github.com/zerostaticthemes/jekyll-serif-theme",
+    "image": "images/social/github.svg"
+  },
+  {
+    "name": "Twitter",
+    "link": "https://twitter.com/zerostaticio",
+    "image": "images/social/twitter.svg"
+  },
+  {
+    "name": "ByteDance",
+    "link": "https://www.toutiao.com/",
+    "image": "images/social/bytedance.svg"
+  }
+]

@@ -1,0 +1,29 @@
+[
+  {
+    "title": "数字化项目咨询规划",
+    "description": "非入侵数字化演进：切实可行的目标、量身定做的方案、教练式的陪同",
+    "image": {
+      "url": "images/features/noun_branding_1885335.svg",
+      "width": 80,
+      "height": 80
+    }
+  },
+  {
+    "title": "数字产品管理辅导",
+    "description": "如何高效开发数字产品与有效管理数字资产的生命周期",
+    "image": {
+      "url": "images/features/noun_3d modeling_1885342.svg",
+      "width": 80,
+      "height": 80
+    }
+  },
+  {
+    "title": "前沿技术启蒙培训",
+    "description": "探索信创前沿技术、分享行业洞察、助力理性开源技术启蒙",
+    "image": {
+      "url": "images/features/noun_The Process_1885341.svg",
+      "width": 80,
+      "height": 80
+    }
+  }
+]
