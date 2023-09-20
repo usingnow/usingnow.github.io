@@ -1,19 +1,22 @@
 main:
-  - name: "数字化咨询服务"
+  - name: "采恪服务"
     url: "/services/"
     weight: 2
-  - name: "团队成员"
-    url: "/team/"
+  - name: "成功案例"
+    url: "/cases"
     weight: 3
+  - name: "团队风采"
+    url: "/team/"
+    weight: 4
   - name: "关于采恪"
     url: "/about/"
-    weight: 4
+    weight: 5
   - name: "联系我们"
     url: "/contact/"
-    weight: 5
-  - name: "Blog"
-    url: "/blogs/"
     weight: 6
+  - name: "专题博客"
+    url: "/blogs/"
+    weight: 7
 
 footer:
   - name: "首页"
