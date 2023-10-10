@@ -3,6 +3,7 @@ title: "夏林云"
 date: 2018-12-20T13:44:55+10:00
 image: "images/team/linyunxia.jpg"
 jobtitle: "UI Designer"
+promoted: false
 weight: 4
 ---
 
