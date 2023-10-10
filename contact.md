@@ -1,7 +1,8 @@
 ---
-title: Contact
+title: 联系我们
 layout: contact
 description: Contact
+map: "/images/illustrations/map.jpg"
 ---
 
 Lorem markdownum aequalis strigis. Saetigeri iubeas, vultu huic alvum nondum de obside ut laniavit arbor palmis, cum quin. Rupes vetat videndo, armigerae crimen habet Priamum nec.

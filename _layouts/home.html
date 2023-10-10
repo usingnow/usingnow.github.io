@@ -22,7 +22,7 @@ bodyClass: "page-home"
 </div>
 
 <div class="strip">
-  <div class="container pt-6 pb-6 pb-md-10">
+  <div class="container pt-6 pb-6 pb-md-4">
     <div class="row justify-content-start">
       {% assign limit = site.home.limit_services | default: 6 %}
       {% for service in site.services limit: limit %}
@@ -33,23 +33,22 @@ bodyClass: "page-home"
               <a href="{{ service.url | relative_url }}">{{ service.title }}</a>
             </h3>
             <hr />
-            <p>{{ service.content | markdownify | strip_html | truncate: 100 }}</p>
+            {% if service.image %}
+              <div class="feature-image"><img alt="{{ service.title }} logo" src="{{ service.image.url | relative_url }}" width="{{ service.image.width }}" height="{{ service.image.height }}" /></div>
+            {% endif %}
+            <p>{{ service.major-description | markdownify | strip_html | truncate: 100 }}</p>
+            <p>{{ service.sub-description | markdownify | strip_html | truncate: 100 }}</p>
           </div>
         </div>
       </div>
       {% endfor %}
-    </div>
-    <div class="row justify-content-center">
-      <div class="col-auto">
-        <a class="button button-primary" href="{{ "services" | relative_url }}">了解更多采恪服务…</a>
-      </div>
     </div>
   </div>
 </div>
 
 {% if site.data.features %}
 <div class="strip strip-grey">
-  <div class="container pt-6 pb-6 pt-md-10 pb-md-10">
+  <div class="container pt-6 pb-6 pt-md-6 pb-md-6">
     <div class="row justify-content-center">
 
       {% for feature in site.data.features %}
@@ -63,6 +62,12 @@ bodyClass: "page-home"
         </div>
       </div>
       {% endfor %}
+
+      <div class="row justify-content-center">
+        <div class="col-auto">
+          <a class="button button-primary" href="{{ "services" | relative_url }}">了解更多采恪服务…</a>
+        </div>
+      </div>
 
     </div>
   </div>

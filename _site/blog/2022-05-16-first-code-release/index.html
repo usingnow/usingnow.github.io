@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>第一次代码发布</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- <link rel="icon" type="image/png" href="/images/favicon-32x32.ico"> -->
+  <!-- Google Fonts CDN -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Self host font -->
+  <!-- <link rel="preload" href="/assets/fonts/playfair-display.woff2" as="font" type="font/woff2" crossorigin> -->
+  <link href="/assets/css/style.css" rel="stylesheet">
+  <link href="/assets/css/syntax.css" rel="stylesheet">
+  
+  
+  <meta property="og:title" content="第一次代码发布"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content=""/>
+  <meta property="og:image" content="http://localhost:4000/images/team/jimmyxu.png"/>
+  
+  <meta name="twitter:card" content="summary"/>
+  <meta name="twitter:site" content=""/>
+  <meta name="twitter:creator" content=""/>
+
+</head>
+
+<body class='page page-blog'>
+  <div id="main-menu-mobile" class="main-menu-mobile">
+  
+  <ul>
+    
+    <li class="">
+      <a href="/services/">采恪服务</a>
+    </li>
+    
+    <li class="">
+      <a href="/cases">成功案例</a>
+    </li>
+    
+    <li class="">
+      <a href="/team/">团队风采</a>
+    </li>
+    
+    <li class="">
+      <a href="/about/">关于采恪</a>
+    </li>
+    
+    <li class="">
+      <a href="/contact/">联系我们</a>
+    </li>
+    
+    <li class="">
+      <a href="/blogs/">专题博客</a>
+    </li>
+    
+  </ul>
+</div>
+
+  <div id="wrapper" class="wrapper">
+    <div class='header'>
+  <div class="container">
+    <div class="logo">
+      <!-- <a href="/"><img width="48px" height="48px" alt="采恪数字化 - usingnow.cn" src="/images/logo/logo.svg" /></a> -->
+      <a href="/" style="font-size: x-large;">
+        <img width="48px" height="48px" alt="采恪数字化 - usingnow.cn" src="/images/logo/logo.svg" />
+        
+        UsingNow
+      </a>
+    </div>
+    <div class="logo-mobile">
+      <a href="/"><img width="32px" height="32px" alt="采恪数字化 - usingnow.cn" src="/images/logo/logo-mobile.svg" /></a>
+    </div>
+    <div id="main-menu" class="main-menu">
+  
+  <ul>
+    
+    <li class="">
+      <a href="/services/">采恪服务</a>
+    </li>
+    
+    <li class="">
+      <a href="/cases">成功案例</a>
+    </li>
+    
+    <li class="">
+      <a href="/team/">团队风采</a>
+    </li>
+    
+    <li class="">
+      <a href="/about/">关于采恪</a>
+    </li>
+    
+    <li class="">
+      <a href="/contact/">联系我们</a>
+    </li>
+    
+    <li class="">
+      <a href="/blogs/">专题博客</a>
+    </li>
+    
+  </ul>
+</div>
+
+    <button id="toggle-main-menu-mobile" class="hamburger hamburger--slider" type="button" aria-label="Mobile Menu">
+  <span class="hamburger-box">
+    <span class="hamburger-inner"></span>
+  </span>
+</button>
+  </div>
+</div>
+
+    <div class="container pb-6 pt-6 pt-md-10 pb-md-10">
+  <div class="row justify-content-start">
+    <div class="col-12 col-md-8">
+      <div class="team team-single">
+        <h1 class="title">第一次代码发布</h1>
+        <div class="content"><meta name="referrer" content="no-referrer" />
+
+<p>在完成企业门户搭建与基本配置后，可以进行第一次发布。直接把生成好的代码 push 到 Github 的代码库，稍等几分钟，就可以看到这些变化。能做到这点的原因是 Chirpy 使用 Github Actions 来自动编译 Jekyll 的源码，并将它放入 gh-pages 分支。Github Pages 可以使用这个分支中的内容来生成静态的页面。</p>
+
+<p>在部署之前，请确认 _config.yml 文件中的 url 已经正确配置。</p>
+
+<p>处于安全上的考虑，Github Pages 是运行在 “安全模式” 下的，但这也阻挠了 Jekyll 中依赖插件自动生成的一些页面文件。因此，这里采用 Github Actions 的功能，在每次 git push 后自动构建整个站点。</p>
+
+<ul>
+  <li>确认 .github/workflows/pages-deploy.yml 文件存在。打开文件，确保 on.push.branches 中的值与网站代码库的默认分支一致。一般是 main。</li>
+</ul>
+
+<p><img src="https://cdn.nlark.com/yuque/0/2022/png/27640265/1652543547371-5e5c4b2d-7f18-40c9-8a99-8407a6e0c48f.png" alt="image.png" /></p>
+
+<ul>
+  <li>确认 tools/deploy.sh 文件存在。这个文件目前不需要任何修改。</li>
+  <li>另外，如果我们曾经运行过 bundle install，那么会自动生成一个 Gemfile.lock 文件。同时，你的操作系统如果不是 Linux，那么你还需要运行以下的命令保持兼容性。注意：这里的操作系统是指你运行 bundle install 的那个系统，如果你使用虚拟机，那要明确虚拟机的系统，而不是你电脑的系统。
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre> bundle lock <span class="nt">--add-platform</span> x86_64-linux
+</pre></td></tr></tbody></table></code></pre></div>    </div>
+    <p>做完以上的步骤，在确认下 Github 上站点的代码库的名称为 <your-github-account>.github.io。</your-github-account></p>
+  </li>
+</ul>
+
+<p>有了以上的设置，我们的站点在收到 git push 的内容之后就会自动构建并发布到 gh-pages 分支中。可以在 Github 上的代码库中看到 Actions 的执行情况。
+<img src="https://cdn.nlark.com/yuque/0/2022/png/27640265/1652545379082-fd83b630-d99d-4d1c-be18-4abb0d128484.png" alt="image.png" /></p>
+
+<p>这里还要有两个设置需要确认。</p>
+
+<ul>
+  <li>更改代码库使用的默认源码分支为 gh-pages。这里还能看到站点是否已经编译完成，可以访问。
+<img src="https://cdn.nlark.com/yuque/0/2022/png/27640265/1652546294664-1c9591c2-9e0e-4ce8-bd50-8d8d972907f8.png" alt="image.png" /></li>
+  <li>Actions 在运行中需要同时有读写权限，而 Github Actions 的设置在默认的情况下，仅有只读权限。如果看到这样的报错，可以在设置中打开写权限。
+<img src="https://cdn.nlark.com/yuque/0/2022/png/27640265/1652540206204-af7f4c56-88c8-4ffc-ad5f-212de3eb21a8.png" alt="image.png" /></li>
+</ul>
+
+<p>第一次代码发布已完成，接下来我们尝试在企业门户中<a href="https://usingnow.github.io/posts/create-a-new-blog/">撰写第一篇博客</a>。</p>
+</div>
+      </div>
+    </div>
+  </div>
+</div>
+  </div>
+  <div class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="footer-inner">
+          <h2 class="footer-title">采恪数字化 - usingnow.cn</h2>
+          <ul>
+            
+            
+            <li class="">
+              <a href="/">首页</a>
+            </li>
+            
+            <li class="">
+              <a href="/contact/">联系我们</a>
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="sub-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="sub-footer-inner">
+          
+            <div class="social">
+  
+    <a href="https://github.com/zerostaticthemes/jekyll-serif-theme" target="blank"><img src="/images/social/github.svg" title="Github" alt="Github" /></a>
+  
+    <a href="https://twitter.com/zerostaticio" target="blank"><img src="/images/social/twitter.svg" title="Twitter" alt="Twitter" /></a>
+  
+    <a href="https://www.toutiao.com/" target="blank"><img src="/images/social/bytedance.svg" title="ByteDance" alt="ByteDance" /></a>
+  
+</div>
+
+          
+          
+          <div class="copyright">Free Jekyll theme by <a class="zerostatic" href="https://www.zerostatic.io">www.zerostatic.io</a></div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  <script type="text/javascript" src="/assets/js/scripts.js"></script>
+  
+</body>
+</html>

@@ -1,21 +1,28 @@
 ---
-title: "企业级数字化咨询规划"
+title: "数字化演进咨询规划"
 date: 2023-08-01T12:33:46+08:00
 weight: 1
-description: "测试用的描述"
+major-description: "“用进废退”，企业数字化需要实打实的场景和效果支撑，并非从 “信息化” 的单一维度硬推，增加节点间的分歧。"
+sub-description: "演进式的数字化改造，从现实的企业运营场景入手，避免大破大立的运动式项目，把“数字化”当作润滑剂，以数据链促进企业供应链环节间的目标协同。"
 ---
 
-Financial accounting (or financial accountancy) is the field of accounting concerned with the **summary, analysis and reporting** of financial transactions related to a business.
+未来经济必然趋向于数字化。纵观经济史的发展，我们可以看到任何商业活动中，所有的参与者都对 **数据和信息** 的获取有越来越高的依赖。
+
+有理由认为，掌握更高效的数据采集、沉淀、分析、挖掘的技术手段，加之与技术手段对应的管理运营流程（SOP），是未来企业竞争力的重要维度。
+数字化转型不论先后，势在必行，将来必来。
 
 
 
 ![Accounting Services](/images/austin-distel-nGc5RT2HmF0-unsplash.jpg)
 
-# Objectives
+## 数字化演进
 
-Financial accounting and financial reporting are often used as synonyms.
+为什么是 **演进** 而不是 **改造** ？用进废退。有效的数字化建立在业务的基座之上，数据的生产来自于真实业务，数据的分析来自于业务的需要，源于经济学、社会学、法学和伦理学的真切的必须。信息化技术，尤其是 Web 3.0 之后的：云计算、大数据、机器学习和人工智能，使数字化的能力首次可以拟真辅助业务。
 
-1. According to International Financial Reporting Standards: the objective of financial reporting is:
+1. 探索、发现业务中自然生长的数字化资产，用合适方式加以留存。平衡海量数据与存储成本。
+
+分析企业运营流程中的产生的数字化资产。数字化资产往往是无形的，存在于有经验的员工的头脑中，理解并抽取出这些数字资产，研究如何将抽象的数字化资产具象化与可持久化。只有沉淀下来的数字资产才能参与到数字经济的交易环节，产生直接或者间接的经济效益。
+
 2. To provide financial information that is useful to existing and potential investors, lenders and other creditors in making decisions about providing resources to the reporting entity.
 3. According to the European Accounting Association:
 
