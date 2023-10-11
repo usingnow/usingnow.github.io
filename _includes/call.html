@@ -1,11 +1,11 @@
-<div class="call">
+<div class="call" id="call-box">
   <div class="call-box-top">
     {% if site.data.contact.phone %}
         <div class="call-phone"><strong>电话： </strong> {{ site.data.contact.phone }} </div>
     {% endif %}
     {% if site.data.contact.email %}
     <div class="call-email"><strong>邮箱： </strong>
-      <a href="mailto:{{ .site.data.contact.email }}">
+      <a href="mailto:{{ .site.data.contact.email }}?subject=采恪数字化工作室-商务合作意向&body=请您简要描述需求，我们会尽快回复" target="_newtab">
         {{ site.data.contact.email }}
       </a>
     </div>

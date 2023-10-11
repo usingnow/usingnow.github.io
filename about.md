@@ -1,87 +1,63 @@
 ---
-title: About
+title: 关于采恪
 layout: page
 description: About
 bodyClass: page-about
+show_call_box: true
 ---
 
-Lorem markdownum aequalis strigis. _Saetigeri iubeas_, vultu huic alvum nondum
-de obside ut laniavit arbor palmis, cum quin. Rupes vetat videndo, armigerae
-crimen habet Priamum nec.
+采恪工作室成立于 2010 年，工作室成员是一群 IT 行业从业多年的老兵。我们喜欢**开源文化**、热衷**前沿技术**、追求**精益管理**。我们希望能通过数字化咨询的方式，分享企业数字化的最佳实践，推广开源文化和理性使用开源代码的有效方式。
+
+> 让数字化不仅仅是大型企业的游戏，也成为创新团队在各阶段的坚实助力。
+
+拥有数字化技术，面向新的历史机遇！
 
 ![Accounting Services](/images/thom-holmes-Lrfw0U_o9I0-unsplash.jpg)
 
-# Objectives
+# 采恪关注的领域
+---
+## 1. 企业数字化演进咨询规划服务：
 
-Financial accounting and financial reporting are often used as synonyms.
+梳理业务流程与实际场景，发现数字资产与相关的业务流程，整理参与节点数据留存。用**演进、非入侵**的方式，对待企业的数字化需求。
 
-1. According to International Financial Reporting Standards: the objective of financial reporting is:
-2. To provide financial information that is useful to existing and potential investors, lenders and other creditors in making decisions about providing resources to the reporting entity.
-3. According to the European Accounting Association:
+> 在所有的改进中，符合“物种演化”的方式，才是可持续的方式。数字化不能只关注未来，还需要对当时当刻的业务产生影响。这样才能“优胜劣汰、用进退废”，
+> 真正实现有生命力的数字化发展。
 
-## Relevance
+## 2. 如何理性使用开源技术与资产：
 
-Relevance is the capacity of the financial information to influence the decision of its users. The ingredients of relevance are the predictive value and confirmatory value. Materiality is a sub-quality of relevance.
+开源技术和资产一方面带来了极大的便利性，降低很多企业创新的门槛，另一方面也带来前所未有的新挑战和风险。
 
-> The ingredients of relevance are the predictive value and confirmatory value.
+开源协议的细微不同，比如个人使用与商用的不同条款，会产生不同的法律风险。对应开源社区的活跃度，是否有大企业持续参与开发、或者“独裁风险”，技术框架
+选择的偏好、创始团队的稳定性，有没有明显的国际政治影响等等……
 
-Information is considered material if its omission or misstatement could influence the economic decisions of users taken on the basis of the financial statements.
+我们关注这些变化，通过互联网技术评估这些无时不在的变化，给我们的客户及时护航。
+## 3. 探索前沿科技助力创业与业务发展：
 
-## Faithful Representation
+大模型人工智能、神经网络、、机器学习、区块链、元宇宙、大数据、边缘计算，前沿技术日新月异，如何才能快速把握其中的要义？
 
-Faithful representation means that the actual effects of the transactions shall be properly accounted for and reported in the financial statements. The words and numbers must match what really happened in the transaction. The ingredients of faithful representation are completeness, neutrality and free from error.
+短视频和快餐文可不能快速帮助团队形成技术启蒙和共识。我们研究前沿技术，结合行业规划，给团队做针对性的前沿技术科普与启蒙。
 
-## Enhancing Qualitative Characteristics
-
-### Verifiability
-
-Verifiability implies consensus between the different knowledgeable and independent users of financial information. Such information must be supported by sufficient evidence to follow the principle of objectivity.
-
-### Comparability
-
-Comparability is the uniform application of accounting methods across entities in the same industry. The principle of consistency is under comparability. Consistency is the uniform application of accounting across points in time within an entity.
-
-### Understandability
-
-Understandability means that accounting reports should be expressed as clearly as possible and should be understood by those to whom the information is relevant.
-Timeliness: Timeliness implies that financial information must be presented to the users before a decision is to be made.
-
+<br>
+# 采恪提供的合作方式
 ---
 
-## Statement of cash flows
+我们提供灵活的服务方式。您可以选择标准服务，或者定制化的服务。
 
-The statement of cash flows considers the inputs and outputs in concrete cash within a stated period. The general template of a cash flow statement is as follows: Cash Inflow - Cash Outflow + Opening Balance = Closing Balance
+| 服务方式 | 服务说明 | 典型周期 | 参考价格
+| ----------- | --------- | --------------- | ---:
+| 现场咨询服务        | 定制化的数字化演进规划咨询规划项目     | 4 - 12 周   | 请 <a href="#call-box">联系我们</a>
+| 现场**标准**培训服务     | 关于前沿技术的启发式教练课程          | 1 - 2 天    |  CNY 9,800.00
+| 现场**定制**培训服务     | 技术主题可选的前沿技术启发式教练课程   | 1 - 2 周    | CNY 19,800.00
+| 开源技术理性化使用培训 | 开源技术风险、商务运营风险和法律风险培训 | 1 - 2 天 | CNY 9,800.00
 
-| Cash Inflow | Outflow   | Opening Balance |
-| ----------- | --------- | --------------- |
-| _Monday_    | `Tuesday` | **Wednesday**   |
-| 1           | 2         | 3               |
+> 其他定制需求，请您 <a href="#call-box">联系我们</a>
 
-**Example 1:** in the beginning of September, Ellen started out with $5 in her bank account. During that same month, Ellen borrowed $20 from Tom. At the end of the month, Ellen bought a pair of shoes for $7. Ellen's cash flow statement for the month of September looks like this:
+<br>
+# 采恪的优势
+---
 
-- Cash inflow: $20
-- Cash outflow:$7
-- Opening balance: $5
-- Closing balance: $20 – $7 + $5 = $18
-
-**Example 2:** in the beginning of June, WikiTables, a company that buys and resells tables, sold 2 tables. They'd originally bought the tables for $25 each, and sold them at a price of $50 per table. The first table was paid out in cash however the second one was bought in credit terms. WikiTables' cash flow statement for the month of June looks like this:
-
-> **Important:** the cash flow statement only considers the exchange of actual cash, and ignores what the person in question owes or is owed.
-
-## Statement of financial position (balance sheet)
-
-The balance sheet is the financial statement showing a firm's assets, liabilities and equity (capital) at a set point in time, usually the end of the fiscal year reported on the accompanying income statement.
-
-- **fixed assets**
-  - property
-  - building
-  - equipment (such as factory machinery)
-- **intangible assets**
-  - copyrights
-  - trademarks
-  - patents
-    - pending
-    - international
-- goodwill
-
-Owner's equity, sometimes referred to as net assets, is represented differently depending on the type of business ownership. Business ownership can be in the form of a sole proprietorship, partnership, or a corporation. For a corporation, the owner's equity portion usually shows common stock, and retained earnings (earnings kept in the company). Retained earnings come from the retained earnings statement, prepared prior to the balance sheet.
+- 一群有经验、有追求的 IT 老兵
+- 灵活的服务方式，可盐可甜
+- 轻量化咨询风格，不过分、但要有用
+- 技术友好，懂技术、但不炫技
+- 文档与流程达人，知识可记录，可复制
