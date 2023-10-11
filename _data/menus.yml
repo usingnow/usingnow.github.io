@@ -1,4 +1,7 @@
 main:
+  - name: "首页"
+    url: "/"
+    weight: 1
   - name: "采恪服务"
     url: "/services/"
     weight: 2

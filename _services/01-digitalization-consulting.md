@@ -17,7 +17,7 @@ sub-description: "演进式的数字化改造，从现实的企业运营场景�
 
 ## 数字化演进
 
-为什么是 **演进** 而不是 **改造** ？用进废退。有效的数字化建立在业务的基座之上，数据的生产来自于真实业务，数据的分析来自于业务的需要，源于经济学、社会学、法学和伦理学的真切的必须。信息化技术，尤其是 Web 3.0 之后的：云计算、大数据、机器学习和人工智能，使数字化的能力首次可以拟真辅助业务。
+为什么是 **演进** 而不是 **改造** ？用进废退。有效的数字化建立在真实的业务场景之上，数据的生产来自于真实业务，数据的分析来自于业务的需要，源于经济学、社会学、法学和伦理学的真切的必须。信息化技术，尤其是 Web 3.0 之后的：云计算、大数据、机器学习和人工智能，使数字化的能力首次可以拟真辅助业务。
 
 1. 探索、发现业务中自然生长的数字化资产，用合适方式加以留存。平衡海量数据与存储成本。
 
@@ -26,7 +26,7 @@ sub-description: "演进式的数字化改造，从现实的企业运营场景�
 2. To provide financial information that is useful to existing and potential investors, lenders and other creditors in making decisions about providing resources to the reporting entity.
 3. According to the European Accounting Association:
 
-## Relevance
+## 采恪提供什么
 
 Relevance is the capacity of the financial information to influence the decision of its users. The ingredients of relevance are the predictive value and confirmatory value. Materiality is a sub-quality of relevance.
 

@@ -3,11 +3,14 @@ layout: default
 bodyClass: "page-teams"
 ---
 
-<div class="intro">
+<div class="intro pb-10">
     <div class="container">
         <div class="row justify-content-start">
             <div class="col-12 col-md-7 col-lg-6 order-2 order-md-1">
                 {{ content }}
+                {% if page.show_call_box %}
+                    {% include call.html show_button=true %}
+                {% endif %}
             </div>
             {% if page.intro_image %}
             <div class="col-12 col-md-5 col-lg-6 order-1 order-md-2 position-relative">
@@ -18,7 +21,7 @@ bodyClass: "page-teams"
     </div>
 </div>
 
-<div class="container pt-6 pb-6">
+<div class="container pb-6">
     <div class="row">
         {% assign promoted_teams = site.team | where: "promoted", true | sort: "weight" %}
         {% for team in promoted_teams %}
@@ -30,6 +33,7 @@ bodyClass: "page-teams"
                 </div>
                 {% endif %}
                 <div class="team-meta">
+                    <!-- <h2 class="team-name"><a href="{{ team.url | relative_url }}">{{ team.title }}</a></h2> -->
                     <h2 class="team-name"><a href="{{ team.url | relative_url }}">{{ team.title }}</a></h2>
                     <p class="team-description">{{ team.jobtitle }}</p>
                     {% if team.linkedinurl %}
@@ -52,7 +56,8 @@ bodyClass: "page-teams"
                 </div>
                 {% endif %}
                 <div class="team-meta">
-                    <h2 class="team-name"><a href="{{ team.url | relative_url }}">{{ team.title }}</a></h2>
+                    <!-- <h2 class="team-name"><a href="{{ team.url | relative_url }}">{{ team.title }}</a></h2> -->
+                    <h2 class="team-name">{{ team.title }}</h2>
                     <p class="team-description">{{ team.jobtitle }}</p>
                 </div>
             </div>

@@ -1,8 +1,8 @@
 ---
 title: "夏林云"
 date: 2018-12-20T13:44:55+10:00
-image: "images/team/linyunxia.jpg"
-jobtitle: "UI Designer"
+image: "images/team/linyunxia.png"
+jobtitle: "信息化基础架构咨询"
 promoted: false
 weight: 4
 ---
