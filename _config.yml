@@ -1,6 +1,6 @@
 baseurl: '/'
 permalink: pretty
-title: '采恪数字化 - usingnow.cn'
+title: '采恪智创 - usingnow.cn'
 
 logo:
   mobile: "images/logo/logo-mobile.svg"
@@ -17,6 +17,7 @@ collections:
   services:
     output: true
     sort_by: weight
+    image: image
   team:
     output: true
   blog:

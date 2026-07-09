@@ -21,7 +21,7 @@ bodyClass: "page-services"
 <div class="container pb-6">
   <div class="row">
     {% for service in site.services %}
-    <div class="col-12 mb-3">
+    <div class="col-md-9 mb-3">
       <div class="service service-summary">
         <div class="service-content">
           <h2 class="service-title">
@@ -29,9 +29,12 @@ bodyClass: "page-services"
           </h2>
           <hr />
           <!-- <p>{{ service.content | markdownify | strip_html | truncate: 200 }}</p> -->
-          <p>{{ service.content | markdownify | strip_html | truncate: 200 }}</p>
+          <p>{{ service.excerpt }}</p>
         </div>
       </div>
+    </div>
+    <div class="col-md-3 mb-3">
+      <img src="{{ service.image }}" style="width: 100%">
     </div>
     {% endfor %}
   </div>

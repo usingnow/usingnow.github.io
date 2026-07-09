@@ -6,8 +6,8 @@
   padding-bottom: 60px;
   overflow: hidden;
   @include media-breakpoint-up(md) {
-    padding-top: 140px;
-    padding-bottom: 140px;
+    padding-top: 80px;
+    padding-bottom: 80px;
   }
   h1 {
     color: $black;
@@ -35,6 +35,14 @@
     font-weight: light;
     line-height: 1.5;
     color: $steel;
+    @include media-breakpoint-up(md) {
+      width: 80%;
+    }
+  }
+  .intro-summary {
+    font-size: 1rem;
+  }
+  .call {
     @include media-breakpoint-up(md) {
       width: 80%;
     }

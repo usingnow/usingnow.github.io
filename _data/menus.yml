@@ -2,7 +2,7 @@ main:
   - name: "首页"
     url: "/"
     weight: 1
-  - name: "采恪服务"
+  - name: "智创服务"
     url: "/services/"
     weight: 2
   - name: "成功案例"
@@ -17,7 +17,7 @@ main:
   - name: "联系我们"
     url: "/contact/"
     weight: 6
-  - name: "专题博客"
+  - name: "采恪观点"
     url: "/blogs/"
     weight: 7
 

@@ -4,6 +4,7 @@ date: 2023-08-02T15:15:26+08:00
 weight: 2
 major-description: "开源软件的广泛使用已经是不可否认的现象。由于代码的公开，软件本身的“复制、修改和使用”，几乎没有任何技术手段上的限制。"
 sub-description: "然而，盲目的使用开源软件，会给团队带来不可预计的风险。有不同授权协议上的细微差异，也有技术、框架、开发语言的硬风险，还有社区文化、开源历史背景等软风险。"
+image: "/images/illustrations/rationalize.svg"
 ---
 
 Cyanee nec pedicis positi. Esse et diem forte quoque et ieiunia
