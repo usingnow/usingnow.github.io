@@ -1,2 +1,14 @@
 .page-home {
+  .service-summary {
+    .service-title {
+      text-align: center;
+      color: $primary;
+    }
+
+    .feature-image {
+      display: flex;
+      justify-content: center;
+      margin: 20px 0;
+    }
+  }
 }

@@ -25,19 +25,23 @@ bodyClass: "page-home"
   <div class="container pt-6 pb-6 pb-md-4">
     <div class="row justify-content-start">
       {% assign limit = site.home.limit_services | default: 6 %}
-      {% for service in site.services limit: limit %}
+      {% for feature in site.data.features limit: limit %}
       <div class="col-12 col-md-4 mb-1">
         <div class="service service-summary">
           <div class="service-content">
-            <h3 class="service-title">
-              <a href="{{ service.url | relative_url }}">{{ service.title }}</a>
-            </h3>
+            <h2 class="service-title">{{ feature.title }}</h3>
             <hr />
-            {% if service.image %}
-              <div class="feature-image"><img alt="{{ service.title }} logo" src="{{ service.image.url | relative_url }}" width="{{ service.image.width }}" height="{{ service.image.height }}" /></div>
+            <!-- {% if feature.image %}
+              <div class="feature-image"><img alt="{{ feature.title }} logo" src="{{ feature.image.url | relative_url }}" width="{{ feature.image.width }}" height="{{ feature.image.height }}" /></div>
+            {% endif %} -->
+            {% if feature.problem %}
+            <h4>你的困惑</h4>
+            <p>{{ feature.problem | markdownify | strip_html }}</p>
             {% endif %}
-            <p>{{ service.major-description | markdownify | strip_html | truncate: 100 }}</p>
-            <p>{{ service.sub-description | markdownify | strip_html | truncate: 100 }}</p>
+            {% if feature.solution %}
+            <h4>我们的解法</h4>
+            <p>{{ feature.solution | markdownify | strip_html }}</p>
+            {% endif %}
           </div>
         </div>
       </div>
@@ -46,19 +50,22 @@ bodyClass: "page-home"
   </div>
 </div>
 
-{% if site.data.features %}
+{% if site.services %}
 <div class="strip strip-grey">
   <div class="container pt-6 pb-6 pt-md-6 pb-md-6">
     <div class="row justify-content-center">
 
-      {% for feature in site.data.features %}
+      {% assign limit = site.home.limit_services | default: 6 %}
+      {% for service in site.services limit: limit %}
       <div class="col-12 col-md-6 col-lg-4 mb-2">
         <div class="feature">
-          {% if feature.image %}
-          <div class="feature-image"><img alt="{{ feature.title }} logo" src="{{ feature.image.url | relative_url }}" width="{{ feature.image.width }}" height="{{ feature.image.height }}" /></div>
+          {% if service.image %}
+          <div class="feature-image"><img alt="{{ service.title }} logo" src="{{ service.image | relative_url }}" width="80" height="80" /></div>
           {% endif %}
-          <h2 class="feature-title">{{ feature.title }}</h2>
-          <div class="feature-content">{{ feature.description }}</div>
+          <h2 class="feature-title">{{ service.title }}</h2>
+          {% if service.major-description %}
+          <div class="feature-content">{{ service.major-description | markdownify | strip_html | truncate: 100 }}</div>
+          {% endif %}
         </div>
       </div>
       {% endfor %}
