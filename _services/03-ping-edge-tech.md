@@ -4,6 +4,7 @@ date: 2023-08-03T15:15:34+08:00
 weight: 3
 major-description: "大模型人工智能、神经网络、、机器学习、区块链、元宇宙、大数据、边缘计算，前沿技术日新月异，如何才能快速把握其中的要义？"
 sub-description: "短视频和快餐文可不能快速帮助团队形成技术启蒙和共识。我们研究前沿技术，结合行业规划，给团队做针对性的前沿技术科普与启蒙。"
+image: "/images/features/noun_The Process_1885341.svg"
 ---
 
 Lorem markdownum aequalis strigis. Saetigeri iubeas, vultu huic alvum nondum
