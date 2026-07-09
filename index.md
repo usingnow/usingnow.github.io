@@ -3,6 +3,7 @@ title: 采恪智创·驻场AI落地工程师外包·4-12周交付
 layout: home
 description: 采恪智创 UsingNow AI · FDE 驻场 AI 落地外包 · 6-12 周驻场交付 · 采恪智创 = 资深 AI 专家 + 开源技术栈 + 兼容国情的外包管理 · 中小企业能用得起的靠谱专业 AI 落地服务。
 intro_image: "images/illustrations/home-new.png"
+intro_image_webp: "images/illustrations/home-new.webp"
 intro_image_absolute: true
 intro_image_hide_on_mobile: false
 show_call_box: true
