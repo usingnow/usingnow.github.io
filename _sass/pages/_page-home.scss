@@ -11,4 +11,37 @@
       margin: 20px 0;
     }
   }
+
+  .services-cards-action {
+    margin-top: 1.5rem;
+    text-align: center;
+  }
+
+  @media (orientation: landscape) and (min-width: 480px) and (max-width: 575.98px) {
+    .services-cards-row > .service-card-col {
+      flex: 0 0 33.333333%;
+      max-width: 33.333333%;
+    }
+  }
+
+  @media (orientation: landscape) and (max-width: 991.98px) {
+    .services-cards-row .feature {
+      padding: 12px;
+
+      .feature-image {
+        width: 56px;
+        height: 56px;
+        margin-bottom: 12px;
+      }
+
+      .feature-title {
+        font-size: 0.95rem;
+      }
+
+      .feature-content {
+        font-size: 0.85rem;
+        line-height: 1.4;
+      }
+    }
+  }
 }

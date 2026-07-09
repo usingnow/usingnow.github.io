@@ -53,11 +53,10 @@ bodyClass: "page-home"
 {% if site.services %}
 <div class="strip strip-grey">
   <div class="container pt-6 pb-6 pt-md-6 pb-md-6">
-    <div class="row justify-content-center">
-
+    <div class="row justify-content-center services-cards-row">
       {% assign limit = site.home.limit_services | default: 6 %}
       {% for service in site.services limit: limit %}
-      <div class="col-12 col-md-6 col-lg-4 mb-2">
+      <div class="col-12 col-sm-4 mb-2 service-card-col">
         <div class="feature">
           {% if service.image %}
           <div class="feature-image"><img alt="{{ service.title }} logo" src="{{ service.image | relative_url }}" width="80" height="80" /></div>
@@ -69,13 +68,9 @@ bodyClass: "page-home"
         </div>
       </div>
       {% endfor %}
-
-      <div class="row justify-content-center">
-        <div class="col-auto">
-          <a class="button button-primary" href="{{ "services" | relative_url }}">了解更多采恪服务…</a>
-        </div>
-      </div>
-
+    </div>
+    <div class="services-cards-action">
+      <a class="button button-primary" href="{{ "services" | relative_url }}">了解更多采恪服务…</a>
     </div>
   </div>
 </div>
