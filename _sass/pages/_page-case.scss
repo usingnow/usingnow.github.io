@@ -1,9 +1,17 @@
 .page-cases {
   .case-summary {
+    margin-bottom: 48px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
     .case-title {
       margin: 0;
+      font-family: $font-family-base;
       font-size: 26px;
       font-weight: normal;
+      font-variant-numeric: lining-nums;
       a {
         text-decoration: none;
         color: $black;
@@ -17,6 +25,28 @@
       font-size: 14px;
       color: $steel;
     }
+
+    hr {
+      margin: 16px 0 20px;
+      border: none;
+      border-bottom: 1px solid $white-offset;
+    }
+
+    .case-summary-image-wrap {
+      overflow: hidden;
+      width: 100%;
+      border-radius: 4px;
+      aspect-ratio: calc(var(--img-w, 1200) / (var(--img-h, 514) * 0.85));
+
+      picture,
+      img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: top center;
+      }
+    }
   }
 }
 
@@ -29,6 +59,7 @@
       font-family: $font-family-base;
       font-size: 34px;
       font-weight: normal;
+      font-variant-numeric: lining-nums;
       line-height: 1.3;
       color: $black;
     }

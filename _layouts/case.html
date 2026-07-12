@@ -5,7 +5,7 @@ bodyClass: "page-case"
 
 <div class="case-hero">
   <div class="container pt-6 pt-md-8 pb-3 pb-md-4">
-    <h1 class="case-hero-title">{{ page.title }}</h1>
+    <h1 class="case-hero-title">{% if page.case_id %}#{{ page.case_id }} - {% endif %}{{ page.title }}</h1>
     <div class="case-hero-meta">
       {% if page.client %}
       <span class="case-hero-meta-item">合作客户：{{ page.client }}</span>
