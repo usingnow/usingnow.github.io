@@ -3,12 +3,12 @@ title: "离散生产集配中心复杂单证 AI 落地改造"
 date: 2026-07-07T12:00:00+08:00
 weight: 1
 case_id: "AI_TT_2026001"
-client: "某国内大型离散制造企业"
-sub-description: "sub面对全球多语言、多格式的海量入库单据，以「读懂单据、汇入信息流」为核心，将 OCR 识别准确率从 40%–55% 提升至 90%，显著减少误录与冗余物料数据。"
+client: "某国内大型船舶制造企业 · 集配中心"
+sub-description: "面对全球多语言、多格式的海量入库单据，以「读懂单据、汇入信息流」为核心，将 OCR 识别准确率从 40%–55% 提升至 90%，显著减少误录与冗余物料数据。"
 image: "/images/cases/case_2026001.png"
 image_webp: "/images/cases/case_2026001.webp"
-image_width: 1587
-image_height: 680
+image_width: 1200
+image_height: 514
 pdf: "/files/cases/ai-complex-document-recognition-v1-1.pdf"
 summary: "某国内大型船舶制造企业的集配中心，基于多模态大模型视觉识别、边缘计算与跨系统语义交叉推理，落地AI+智能单据识别系统。该系统使入库效率提升 40% 以上，同时打通 WMS 仓储数据、ERP 物料数据与设计物料数据的交叉比对，显著减少集配现场作业中误录错误物料数据、误增冗余物料信息的问题。"
 project_info:
