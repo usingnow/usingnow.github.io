@@ -6,7 +6,7 @@ main:
     url: "/services/"
     weight: 2
   - name: "成功案例"
-    url: "/cases"
+    url: "/cases/"
     weight: 3
   - name: "团队风采"
     url: "/team/"

@@ -18,6 +18,10 @@ collections:
     output: true
     sort_by: weight
     image: image
+  cases:
+    output: true
+    sort_by: weight
+    image: image
   team:
     output: true
   blog:
@@ -29,6 +33,11 @@ defaults:
       type: "services"
     values:
       layout: "service"
+  - scope:
+      path: ""
+      type: "cases"
+    values:
+      layout: "case"
   - scope:
       path: ""
       type: "team"

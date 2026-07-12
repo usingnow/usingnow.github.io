@@ -1,7 +1,7 @@
 <div class="call" id="call-box">
   <div class="call-box-top">
     {% if site.data.contact.phone %}
-        <div class="call-phone"><strong>电话： </strong> {{ site.data.contact.phone }} </div>
+      <div class="call-phone"><strong>电话： </strong> {{ site.data.contact.phone }} </div>
     {% endif %}
     {% if site.data.contact.email %}
     <div class="call-email"><strong>邮箱： </strong>
@@ -11,9 +11,9 @@
     </div>
     {% endif %}
   </div>
-    {% if include.show_button %}
-      <div class="call-box-bottom">
-        <a href="{{ site.data.contact.contact_button_link }}" class="button">联系我们</a>
-      </div>
-    {% endif %}
+  {% if include.show_button %}
+    <div class="call-box-bottom">
+      <a href="{{ site.data.contact.contact_button_link }}" class="button">预约免费咨询</a>
+    </div>
+  {% endif %}
 </div>

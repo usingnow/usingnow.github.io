@@ -1,0 +1,45 @@
+---
+layout: default
+bodyClass: "page-cases"
+---
+
+{% include intro-hero.html %}
+
+<div class="strip">
+  <div class="container pt-6 pb-6 pb-md-4">
+    <div class="row">
+    {% for case_item in site.cases %}
+    <div class="col-md-9 mb-3">
+      <div class="case case-summary">
+        <div class="case-content">
+          <h2 class="case-title">
+            <a href="{{ case_item.url | relative_url }}">{{ case_item.title }}</a>
+          </h2>
+          {% if case_item.client %}
+          <p class="case-client">{{ case_item.client }}</p>
+          {% endif %}
+          <hr />
+          {% if case_item.summary %}
+          <p>{{ case_item.summary }}</p>
+          {% else %}
+          <p>{{ case_item.excerpt }}</p>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 mb-3">
+      {% if case_item.image %}
+      {% if case_item.image_webp %}
+      <picture>
+        <source srcset="{{ case_item.image_webp | relative_url }}" type="image/webp" />
+        <img src="{{ case_item.image | relative_url }}" style="width: 100%" alt="{{ case_item.title }}" loading="lazy" />
+      </picture>
+      {% else %}
+      <img src="{{ case_item.image | relative_url }}" style="width: 100%" alt="{{ case_item.title }}" loading="lazy" />
+      {% endif %}
+      {% endif %}
+    </div>
+    {% endfor %}
+    </div>
+  </div>
+</div>

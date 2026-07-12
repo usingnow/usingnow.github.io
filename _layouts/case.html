@@ -1,0 +1,77 @@
+---
+layout: default
+bodyClass: "page-case"
+---
+
+<div class="case-hero">
+  <div class="container pt-6 pt-md-8 pb-3 pb-md-4">
+    <h1 class="case-hero-title">{{ page.title }}</h1>
+    <div class="case-hero-meta">
+      {% if page.client %}
+      <span class="case-hero-meta-item">合作客户：{{ page.client }}</span>
+      {% endif %}
+      {% if page.date %}
+      <span class="case-hero-meta-item">案例时间：{{ page.date | date: "%Y 年 %m 月" }}</span>
+      {% endif %}
+      {% if page.case_id %}
+      <span class="case-hero-meta-item">案例编号：{{ page.case_id }}</span>
+      {% endif %}
+    </div>
+    {% if page.image %}
+    <div class="case-hero-image-wrap" style="--img-w: {{ page.image_width | default: 1587 }}; --img-h: {{ page.image_height | default: 680 }};">
+      {% if page.image_webp %}
+      <picture>
+        <source srcset="{{ page.image_webp | relative_url }}" type="image/webp" />
+        <img src="{{ page.image | relative_url }}" class="case-hero-image img-fluid" alt="{{ page.title }}" width="{{ page.image_width | default: 1587 }}" height="{{ page.image_height | default: 680 }}" />
+      </picture>
+      {% else %}
+      <img src="{{ page.image | relative_url }}" class="case-hero-image img-fluid" alt="{{ page.title }}" width="{{ page.image_width | default: 1587 }}" height="{{ page.image_height | default: 680 }}" loading="lazy" />
+      {% endif %}
+    </div>
+    {% endif %}
+    {% if page.summary %}
+    <p class="case-hero-summary">{{ page.summary }}</p>
+    {% endif %}
+  </div>
+</div>
+
+<div class="container pb-6 pb-md-10">
+  <hr class="case-divider" />
+  <div class="row justify-content-start pt-3">
+    <div class="col-12 col-md-8">
+      <div class="case case-single">
+        <div class="content">{{ content }}</div>
+      </div>
+    </div>
+    <div class="col-12 col-md-4 case-sidebar">
+      {% if page.case_id or page.project_info or page.pdf %}
+      <div class="case-project-info">
+        <div class="case-project-info-header">
+          <h3 class="case-project-info-title">项目信息</h3>
+          {% if page.pdf %}
+          <a class="button button-primary case-pdf-button" href="{{ page.pdf | relative_url }}" target="_blank" rel="noopener noreferrer">下载案例 PDF</a>
+          {% endif %}
+        </div>
+        {% if page.case_id or page.project_info %}
+        <table class="case-project-info-table">
+          <tbody>
+            {% if page.case_id %}
+            <tr>
+              <th>案例编号</th>
+              <td>{{ page.case_id }}</td>
+            </tr>
+            {% endif %}
+            {% for item in page.project_info %}
+            <tr>
+              <th>{{ item.label }}</th>
+              <td>{{ item.value }}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+        {% endif %}
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</div>
