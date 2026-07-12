@@ -5,7 +5,6 @@ description: 采恪的专家团队成员介绍。
 permalink: "/team/"
 intro_image: "images/illustrations/teams-2.png"
 intro_image_absolute: true
-intro_image_hide_on_mobile: false
 show_call_box: true
 ---
 

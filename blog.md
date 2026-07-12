@@ -5,7 +5,6 @@ description: 采恪案例与行业观点
 permalink: "/blogs/"
 intro_image: "images/illustrations/reading.svg"
 intro_image_absolute: true
-intro_image_hide_on_mobile: false
 ---
 
 # 采恪观点
