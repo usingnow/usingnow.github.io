@@ -6,6 +6,7 @@ intro_image: "images/illustrations/home-new.png"
 intro_image_webp: "images/illustrations/home-new.webp"
 intro_image_absolute: true
 intro_image_hide_on_mobile: false
+intro_image_legacy: true
 show_call_box: true
 ---
 
