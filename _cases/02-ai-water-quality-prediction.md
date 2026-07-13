@@ -6,8 +6,9 @@ case_id: "AI_TT_2026002"
 client: "某国际水务集团"
 sub-description: "基于 Transformer 架构自建时序预测模型，将水质异常告警从平均 30–120 分钟提前至 15–30 分钟，全程本地化部署，数据不出域。"
 image: "/images/cases/case_20260012.png"
-image_width: 1587
-image_height: 680
+image_webp: "/images/cases/case_20260012.webp"
+image_width: 1200
+image_height: 514
 pdf: "/files/cases/ai-water-quality-prediction-v1-1.pdf"
 summary: "某国际水务集团的城市公共水体水质监测场景中，我们从大语言模型 Transformer 架构本质出发，利用企业自有数据，将其转化为 AI 可学习的标准化数据，并自建时序预测模型，将水质异常告警从平均 30–120 分钟（人工巡检发现）提前到仅需 15–30 分钟（AI 预测识别并预警），为水质安全与人工干预争取关键处置窗口。全程处理本地化，数据不出域。"
 project_info:

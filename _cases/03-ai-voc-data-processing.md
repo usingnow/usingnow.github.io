@@ -6,8 +6,9 @@ case_id: "AI_TT_2026003"
 client: "某全球领先的消费电子企业（TOP 2 无人机制造商）"
 sub-description: "基于多模态大模型与语义推理，落地 VoC 智能分析平台，实现全量自动化分类与跨部门分派，负面舆情发现时效从天级缩短至分钟级。"
 image: "/images/cases/case_2026003.png"
-image_width: 1384
-image_height: 595
+image_webp: "/images/cases/case_2026003.webp"
+image_width: 1200
+image_height: 516
 pdf: "/files/cases/ai-voc-data-processing-v1-1.pdf"
 summary: "某全球领先的消费电子企业（TOP 2 无人机制造商），基于多模态大模型、自然语言处理与语义推理，落地 AI+ 全渠道客户之声 VoC 智能分析平台。该系统使 VoC 处理实现全量自动化分类、情感研判与跨部门分派，负面舆情发现时效可从天级缩短至分钟级，同时打通客服、产品研发、市场等部门的数据闭环。"
 project_info:
