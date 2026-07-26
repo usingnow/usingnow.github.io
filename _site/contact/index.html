@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>合作联系</title>
+  <title>立刻预约<br>一小时在线免费咨询</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <!-- <link rel="icon" type="image/png" href="/images/favicon-32x32.ico"> -->
   <!-- Google Fonts CDN -->
@@ -16,7 +16,7 @@
   <link href="/assets/css/syntax.css" rel="stylesheet">
   
   <meta name="description" content="Contact" />
-  <meta property="og:title" content="合作联系"/>
+  <meta property="og:title" content="立刻预约<br>一小时在线免费咨询"/>
   <meta property="og:type" content="website"/>
   <meta property="og:url" content=""/>
   
@@ -121,11 +121,150 @@
 </div>
 
     <div class="container pb-6 pt-6 pt-md-10 pb-md-10">
-    <div class="row justify-content-start">
-        <div class="col-12 col-md-8">
-            <div class="service service-single">
-                <h1 class="title">合作联系</h1>
-                    <div class="call" id="call-box">
+  <div class="row justify-content-start">
+    <div class="col-12 col-md-8">
+      <div class="service service-single">
+        <h1 class="title">立刻预约<br>一小时在线免费咨询</h1>
+        <p class="contact-lead">留下您的联系方式与需求，我们会尽快与您沟通。</p>
+        <form id="contact-form" class="contact-form" action="https://contact-api-quuxgqypuh.cn-hangzhou.fcapp.run" method="post" novalidate>
+  <div class="form-group">
+    <label for="contact-subject">您希望解决什么问题？ <span class="required">*</span></label>
+    <input id="contact-subject" class="form-control" type="text" name="subject" maxlength="100" required autocomplete="off" />
+  </div>
+
+  <div class="form-group">
+    <label for="contact-name">联系人 <span class="required">*</span></label>
+    <input id="contact-name" class="form-control" type="text" name="name" maxlength="50" required autocomplete="name" />
+  </div>
+
+  <div class="form-group">
+    <label for="contact-cellphone">手机号 <span class="required">*</span></label>
+    <input id="contact-cellphone" class="form-control" type="tel" name="cellphone" maxlength="11" pattern="1[3-9]\d{9}" required autocomplete="tel" inputmode="numeric" />
+  </div>
+
+  <div class="form-group">
+    <label for="contact-company">企业 <span class="optional">（选填）</span></label>
+    <input id="contact-company" class="form-control" type="text" name="company" maxlength="100" autocomplete="organization" />
+  </div>
+
+  <div class="form-group">
+    <label for="contact-content">咨询内容 <span class="required">*</span></label>
+    <textarea id="contact-content" class="form-control" name="content" rows="6" maxlength="2000" required></textarea>
+  </div>
+
+  
+  <div class="contact-form-honeypot" aria-hidden="true">
+    <label for="contact-website">网站</label>
+    <input id="contact-website" type="text" name="website" tabindex="-1" autocomplete="off" />
+  </div>
+
+  <div id="contact-form-status" class="contact-form-status" role="status" aria-live="polite" hidden></div>
+
+  <div class="form-actions">
+    <button type="submit" class="button contact-form-submit" id="contact-form-submit">提交预约申请</button>
+  </div>
+</form>
+
+<script>
+(function () {
+  var form = document.getElementById('contact-form');
+  if (!form) return;
+
+  var statusEl = document.getElementById('contact-form-status');
+  var submitBtn = document.getElementById('contact-form-submit');
+  var phoneRe = /^1[3-9]\d{9}$/;
+
+  function showStatus(type, message) {
+    statusEl.hidden = false;
+    statusEl.className = 'contact-form-status is-' + type;
+    statusEl.textContent = message;
+  }
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    var subject = (form.subject.value || '').trim();
+    var name = (form.name.value || '').trim();
+    var cellphone = (form.cellphone.value || '').trim();
+    var company = (form.company.value || '').trim();
+    var content = (form.content.value || '').trim();
+    var website = (form.website.value || '').trim();
+
+    if (!subject || subject.length > 100) {
+      showStatus('error', '请填写主题（1-100 字）');
+      form.subject.focus();
+      return;
+    }
+    if (!name || name.length > 50) {
+      showStatus('error', '请填写联系人姓名（1-50 字）');
+      form.name.focus();
+      return;
+    }
+    if (!phoneRe.test(cellphone)) {
+      showStatus('error', '请填写正确的手机号');
+      form.cellphone.focus();
+      return;
+    }
+    if (company.length > 100) {
+      showStatus('error', '企业名称过长');
+      form.company.focus();
+      return;
+    }
+    if (!content || content.length > 2000) {
+      showStatus('error', '请填写咨询内容（1-2000 字）');
+      form.content.focus();
+      return;
+    }
+
+    submitBtn.disabled = true;
+    submitBtn.textContent = '提交中…';
+    showStatus('pending', '正在提交，请稍候…');
+
+    fetch(form.action, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        subject: subject,
+        name: name,
+        cellphone: cellphone,
+        company: company,
+        content: content,
+        website: website
+      })
+    })
+      .then(function (res) {
+        return res.json().then(function (data) {
+          return { ok: res.ok && data.ok, message: data.message || (res.ok ? '提交成功' : '提交失败，请稍后重试') };
+        });
+      })
+      .then(function (result) {
+        if (result.ok) {
+          showStatus('success', result.message);
+          form.reset();
+        } else {
+          showStatus('error', result.message);
+        }
+      })
+      .catch(function () {
+        showStatus('error', '网络异常，请稍后重试');
+      })
+      .finally(function () {
+        submitBtn.disabled = false;
+        submitBtn.textContent = '提交预约申请';
+      });
+  });
+})();
+</script>
+
+      </div>
+    </div>
+    <div class="col-12 col-md-4">
+      <div class="service service-single contact-sidebar">
+        <p class="contact-map mt-4">
+          <svg width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M39.9868 29.8398L37.4868 34.8398C36.5868 36.6398 34.3868 37.4398 32.4868 36.8398C28.1868 35.4398 23.9868 33.0398 20.6868 29.7398C17.3868 26.4398 14.9868 22.2398 13.5868 17.9398C12.9868 16.0398 13.7868 13.8398 15.5868 12.9398L20.5868 10.4398C21.5868 9.9398 22.7868 10.2398 23.3868 11.1398L26.3868 16.1398C26.8868 16.9398 26.7868 17.9398 26.0868 18.6398L23.7868 20.9398C24.8868 23.1398 26.7868 25.0398 28.9868 26.1398L31.2868 23.8398C31.9868 23.1398 32.9868 23.0398 33.7868 23.5398L38.7868 26.5398C39.6868 27.1398 39.9868 28.3398 39.9868 29.8398Z" stroke="#333" stroke-width="4" stroke-linejoin="round"/></svg>
+          扫码联系我们 / 预约在线免费咨询
+        </p>
+        <div class="call" id="call-box">
   <div class="call-box-top">
     
       <div class="call-phone"><strong>电话： </strong> 0086-180-0179-2927 </div>
@@ -141,7 +280,21 @@
   
 </div>
 
-                <div class="content mt-4"><p>采恪工作室在繁华的上海，毗邻五角场、大学路和创智天地。</p>
+        
+        <div class="contact-wecom-qr">
+          <img src="/images/contact/wecom-qr.jpg" alt="企业微信二维码：扫码预约在线免费咨询" width="200" height="200" loading="lazy" />
+        </div>
+        
+        <p class="contact-map mt-4">
+          <svg width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M24 44C24 44 39 32 39 19C39 10.7157 32.2843 4 24 4C15.7157 4 9 10.7157 9 19C9 32 24 44 24 44Z" fill="none" stroke="#333" stroke-width="4" stroke-linejoin="round"/><path d="M24 25C27.3137 25 30 22.3137 30 19C30 15.6863 27.3137 13 24 13C20.6863 13 18 15.6863 18 19C18 22.3137 20.6863 25 24 25Z" fill="none" stroke="#333" stroke-width="4" stroke-linejoin="round"/></svg>
+          上海 / 杨浦 / 五角场
+        </p>
+        
+        <div class="content mt-3">
+          <img alt="立刻预约<br>一小时在线免费咨询" src="/images/illustrations/map.jpg" />
+        </div>
+        
+        <div class="content mt-4"><p><strong>采恪智创工作室</strong> 在繁华的上海，毗邻五角场、大学路和创智天地。</p>
 
 <p>我们在周二到周五工作，平日也会喝个咖啡碰撞下思路。</p>
 
@@ -172,21 +325,9 @@
   </tbody>
 </table>
 </div>
-            </div>
-        </div>
-        <div class="col-12 col-md-4">
-            <div class="service service-single">
-                <p class="contact-map">
-                    <svg width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M24 44C24 44 39 32 39 19C39 10.7157 32.2843 4 24 4C15.7157 4 9 10.7157 9 19C9 32 24 44 24 44Z" fill="none" stroke="#333" stroke-width="4" stroke-linejoin="round"/><path d="M24 25C27.3137 25 30 22.3137 30 19C30 15.6863 27.3137 13 24 13C20.6863 13 18 15.6863 18 19C18 22.3137 20.6863 25 24 25Z" fill="none" stroke="#333" stroke-width="4" stroke-linejoin="round"/></svg>
-                    
-                    上海 / 杨浦 / 五角场
-                </p>
-                <div class="content mt-4">
-                    <img alt="合作联系" src="/images/illustrations/map.jpg" />
-                </div>
-            </div>
-        </div>
+      </div>
     </div>
+  </div>
 </div>
 
   </div>

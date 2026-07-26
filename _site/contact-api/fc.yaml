@@ -1,0 +1,22 @@
+edition: 3.0
+services:
+  contact-api:
+    component: fc3
+    props:
+      region: cn-hangzhou
+      service:
+        name: contact-api
+        description: usingnow.tech 联系表单 → 飞书多维表
+      function:
+        name: contact-handler
+        runtime: nodejs18
+        handler: index.handler
+        timeout: 10
+        memorySize: 128
+        codeUri: ./
+      triggers:
+        - name: http-trigger
+          type: http
+          config:
+            methods: [POST, OPTIONS]
+            authType: anonymous
