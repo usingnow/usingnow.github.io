@@ -3,30 +3,50 @@
   width: 100%;
   height: auto;
   margin: 0;
+  object-fit: contain;
+  object-position: center top;
 }
 
+// 相对原 absolute 尺寸约 0.82，接近统一 1024 画布前的首页观感
+$intro-image-scale: 0.82;
+
+// 首页题图基准样式：各一级页（home / services / cases / team）共用
 .intro-image.intro-image-absolute {
   max-width: none;
   padding: 0;
-  margin-top: -40px;
-  margin-bottom: 30px;
+  // 小屏：图在文案上方，略上移贴近标题区
+  margin-top: -24px;
+  margin-bottom: 24px;
+  width: 100%;
+  max-width: 420px * $intro-image-scale;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include media-breakpoint-up(sm) {
+    margin-top: -32px;
+    margin-bottom: 28px;
+    max-width: 480px * $intro-image-scale;
+  }
 
   @include media-breakpoint-up(md) {
     position: absolute;
-    bottom: -50px;
-    left: -50px;
-    width: 550px;
+    top: 0;
+    bottom: auto;
+    left: -40px;
+    width: 550px * $intro-image-scale; // ~451px
+    max-width: none;
+    margin: 0;
   }
 
   @include media-breakpoint-up(lg) {
-    bottom: -60px;
-    left: -60px;
-    width: 650px;
+    top: 0;
+    left: -50px;
+    width: 650px * $intro-image-scale; // ~533px
   }
 
   @include media-breakpoint-up(xl) {
-    bottom: -100px;
-    left: -70px;
-    width: 700px;
+    top: -10px;
+    left: -55px;
+    width: 700px * $intro-image-scale; // ~574px
   }
 }

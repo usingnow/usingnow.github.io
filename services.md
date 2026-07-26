@@ -2,7 +2,9 @@
 title: Services
 layout: services
 description: Services
-intro_image: "images/illustrations/services-2.png"
+intro_image: "images/illustrations/new/services-new.webp"
+intro_image_width: 1024
+intro_image_height: 1024
 intro_image_absolute: true
 show_call_box: true
 ---

@@ -3,7 +3,9 @@ title: 采恪团队
 layout: teams
 description: 采恪的专家团队成员介绍。
 permalink: "/team/"
-intro_image: "images/illustrations/teams-2.png"
+intro_image: "images/illustrations/new/teams-new.webp"
+intro_image_width: 1024
+intro_image_height: 1024
 intro_image_absolute: true
 show_call_box: true
 ---

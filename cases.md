@@ -2,7 +2,9 @@
 title: 成功案例
 layout: cases
 description: 采恪成功案例
-intro_image: "images/illustrations/cases-new.png"
+intro_image: "images/illustrations/new/cases-new.webp"
+intro_image_width: 1024
+intro_image_height: 1024
 intro_image_absolute: true
 show_call_box: true
 ---
