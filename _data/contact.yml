@@ -1,6 +1,6 @@
 email: 'siying.xu@usingnow.cn'
 phone: '0086-180-0179-2927'
-contact_button_link: 'contact'
+contact_button_link: '/contact/'
 # 联调阶段使用 FC 默认域名；绑定 api.usingnow.tech 后改此处即可
 form_api_url: 'https://contact-api-quuxgqypuh.cn-hangzhou.fcapp.run'
 # 企业微信二维码
