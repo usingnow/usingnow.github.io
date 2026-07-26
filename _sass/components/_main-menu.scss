@@ -12,13 +12,19 @@
       font-size: 1rem;
       > a {
         padding: 10px 12px 10px 12px;
-        display: inline-block;
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
         font-weight: normal;
         text-decoration: none;
         color: $primary;
         &:hover {
           text-decoration: none;
         }
+      }
+      .menu-external-icon {
+        flex-shrink: 0;
+        opacity: 0.85;
       }
       &.active {
         > a {

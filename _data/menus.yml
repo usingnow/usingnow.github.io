@@ -2,24 +2,28 @@ main:
   - name: "首页"
     url: "/"
     weight: 1
-  - name: "智创服务"
+  - name: "服务"
     url: "/services/"
     weight: 2
-  - name: "成功案例"
+  - name: "案例"
     url: "/cases/"
     weight: 3
-  - name: "团队风采"
+  - name: "团队"
     url: "/team/"
     weight: 4
-  - name: "关于采恪"
+  - name: "关于"
     url: "/about/"
     weight: 5
-  - name: "联系我们"
+  - name: "联系"
     url: "/contact/"
     weight: 6
-  - name: "采恪观点"
+  - name: "观点"
     url: "/blogs/"
     weight: 7
+  - name: "FDE中文社区"
+    url: "https://fde.usingnow.tech"
+    external: true
+    weight: 8
 
 footer:
   - name: "首页"
