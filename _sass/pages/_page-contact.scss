@@ -96,37 +96,4 @@
       color: $primary-dark;
     }
   }
-
-  .contact-sidebar {
-    .contact-wecom-lead {
-      margin: 0 0 0.75rem;
-      font-size: 0.95rem;
-      line-height: 1.45;
-      color: $black;
-      font-weight: 600;
-    }
-
-    .call {
-      margin-bottom: 0;
-    }
-
-    .contact-wecom-qr {
-      margin-top: 1rem;
-      text-align: center;
-
-      img {
-        display: inline-block;
-        width: 100%;
-        max-width: 200px;
-        height: auto;
-        vertical-align: middle;
-      }
-    }
-
-    .contact-map {
-      display: flex;
-      align-items: center;
-      gap: 0.35rem;
-    }
-  }
 }

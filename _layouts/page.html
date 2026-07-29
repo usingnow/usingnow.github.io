@@ -13,7 +13,9 @@ bodyClass: "page-basic"
         </div>
         <div class="col-12 col-md-4">
             {% if page.show_call_box %}
-                {% include call.html show_button=true %}
+            <div class="service service-single">
+                {% include contact-sidebar.html show_button=true %}
+            </div>
             {% endif %}
         </div>
     </div>

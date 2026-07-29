@@ -8,8 +8,18 @@
     margin-top: 20px;
     margin-bottom: 20px;
   }
+  // 1:1 插图按 6:5 显示：裁掉上部，底部人物对齐保留
+  img.img-crop-6-5 {
+    width: 100%;
+    aspect-ratio: 6 / 5;
+    object-fit: cover;
+    object-position: bottom center;
+  }
   strong {
     font-width: bold;
+  }
+  .text-primary {
+    color: $primary;
   }
   em {
     font-style: italic;

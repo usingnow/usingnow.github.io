@@ -1,0 +1,43 @@
+.contact-sidebar {
+  .call {
+    margin-bottom: 0;
+  }
+
+  .contact-wecom-qr {
+    margin-top: 1rem;
+    text-align: center;
+
+    img {
+      display: inline-block;
+      width: 100%;
+      max-width: 200px;
+      height: auto;
+      vertical-align: middle;
+    }
+  }
+
+  .contact-map {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+    font-size: 0.95rem;
+    line-height: 1.45;
+    color: $black;
+    font-weight: 600;
+
+    &.mt-4 {
+      margin-top: 1.5rem;
+    }
+  }
+
+  .contact-sidebar-actions {
+    margin-top: 1.25rem;
+    text-align: center;
+
+    .button {
+      display: inline-block;
+    }
+  }
+}

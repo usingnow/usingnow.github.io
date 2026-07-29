@@ -1,0 +1,37 @@
+<div class="contact-sidebar">
+  <p class="contact-map">
+    <svg width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M39.9868 29.8398L37.4868 34.8398C36.5868 36.6398 34.3868 37.4398 32.4868 36.8398C28.1868 35.4398 23.9868 33.0398 20.6868 29.7398C17.3868 26.4398 14.9868 22.2398 13.5868 17.9398C12.9868 16.0398 13.7868 13.8398 15.5868 12.9398L20.5868 10.4398C21.5868 9.9398 22.7868 10.2398 23.3868 11.1398L26.3868 16.1398C26.8868 16.9398 26.7868 17.9398 26.0868 18.6398L23.7868 20.9398C24.8868 23.1398 26.7868 25.0398 28.9868 26.1398L31.2868 23.8398C31.9868 23.1398 32.9868 23.0398 33.7868 23.5398L38.7868 26.5398C39.6868 27.1398 39.9868 28.3398 39.9868 29.8398Z" stroke="#333" stroke-width="4" stroke-linejoin="round"/></svg>
+    扫码联系我们 / 预约在线免费咨询
+  </p>
+
+  {% include call.html show_button=false %}
+
+  {% if site.data.contact.wecom_qr %}
+  <div class="contact-wecom-qr">
+    <img src="{{ site.data.contact.wecom_qr | relative_url }}" alt="企业微信二维码：扫码预约在线免费咨询" width="200" height="200" loading="lazy" />
+  </div>
+  {% endif %}
+
+  {% if include.show_button %}
+  <div class="contact-sidebar-actions">
+    <a href="{{ site.data.contact.contact_button_link | relative_url }}" class="button">预约免费咨询</a>
+  </div>
+  {% endif %}
+
+  {% if include.show_address %}
+  <p class="contact-map mt-4">
+    <svg width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M24 44C24 44 39 32 39 19C39 10.7157 32.2843 4 24 4C15.7157 4 9 10.7157 9 19C9 32 24 44 24 44Z" fill="none" stroke="#333" stroke-width="4" stroke-linejoin="round"/><path d="M24 25C27.3137 25 30 22.3137 30 19C30 15.6863 27.3137 13 24 13C20.6863 13 18 15.6863 18 19C18 22.3137 20.6863 25 24 25Z" fill="none" stroke="#333" stroke-width="4" stroke-linejoin="round"/></svg>
+    上海 / 杨浦 / 五角场
+  </p>
+  {% endif %}
+
+  {% if include.show_map and page.map %}
+  <div class="content mt-3">
+    <img alt="{{ page.title }}" src="{{ page.map | relative_url }}" />
+  </div>
+  {% endif %}
+
+  {% if include.show_content %}
+  <div class="content mt-4">{{ content }}</div>
+  {% endif %}
+</div>
