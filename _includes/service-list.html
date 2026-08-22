@@ -1,0 +1,50 @@
+{% for service in site.services %}
+  {% assign is_even = forloop.index | modulo: 2 %}
+  <div class="strip {% if is_even == 0 %}strip-grey{% else %}strip-white{% endif %}">
+    <div class="container service-block-container">
+      <div class="row align-items-stretch service-block">
+        {% if is_even == 0 %}
+        <div class="col-12 col-md-6 service-block-media">
+          {% if service.image %}
+          <div class="service-block-image">
+            <img src="{{ service.image | relative_url }}" alt="{{ service.title }}" loading="lazy" />
+          </div>
+          {% endif %}
+        </div>
+        <div class="col-12 col-md-6 service-block-content">
+          <h2 class="service-block-title">
+            <a href="{{ service.url | relative_url }}">{{ service.title }}</a>
+          </h2>
+          {% if service.major-description %}
+          <p class="service-block-lead">{{ service.major-description }}</p>
+          {% endif %}
+          {% if service.sub-description %}
+          <p class="service-block-text">{{ service.sub-description }}</p>
+          {% endif %}
+          <a href="{{ service.url | relative_url }}" class="button">了解更多</a>
+        </div>
+        {% else %}
+        <div class="col-12 col-md-6 service-block-content order-md-1">
+          <h2 class="service-block-title">
+            <a href="{{ service.url | relative_url }}">{{ service.title }}</a>
+          </h2>
+          {% if service.major-description %}
+          <p class="service-block-lead">{{ service.major-description }}</p>
+          {% endif %}
+          {% if service.sub-description %}
+          <p class="service-block-text">{{ service.sub-description }}</p>
+          {% endif %}
+          <a href="{{ service.url | relative_url }}" class="button">了解更多</a>
+        </div>
+        <div class="col-12 col-md-6 service-block-media order-md-2">
+          {% if service.image %}
+          <div class="service-block-image">
+            <img src="{{ service.image | relative_url }}" alt="{{ service.title }}" loading="lazy" />
+          </div>
+          {% endif %}
+        </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+{% endfor %}
