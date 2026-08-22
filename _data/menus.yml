@@ -8,22 +8,19 @@ main:
   - name: "案例"
     url: "/cases/"
     weight: 3
-  - name: "团队"
-    url: "/team/"
-    weight: 4
   - name: "关于"
     url: "/about/"
-    weight: 5
+    weight: 4
   - name: "联系"
     url: "/contact/"
-    weight: 6
+    weight: 5
   - name: "观点"
     url: "/blogs/"
-    weight: 7
+    weight: 6
   - name: "FDE中文社区"
     url: "https://fde.usingnow.tech"
     external: true
-    weight: 8
+    weight: 7
 
 footer:
   - name: "首页"

@@ -23,7 +23,7 @@ collections:
     sort_by: weight
     image: image
   team:
-    output: true
+    output: false
   blog:
     output: true
 

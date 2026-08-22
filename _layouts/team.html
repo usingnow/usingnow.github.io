@@ -3,12 +3,33 @@ layout: default
 bodyClass: "page-team"
 ---
 
+{% if page.member_id %}
+  {% assign member = site.team | where: "slug", page.member_id | first %}
+{% else %}
+  {% assign member = page %}
+{% endif %}
+
 <div class="container pb-6 pt-6 pt-md-10 pb-md-10">
   <div class="row justify-content-start">
     <div class="col-12 col-md-8">
       <div class="team team-single">
-        <h1 class="title">{{page.title}}</h1>
-        <div class="content">{{content}}</div>
+        <p class="mb-3"><a href="{{ '/about/#team' | relative_url }}">← 返回关于</a></p>
+        {% if member.image %}
+        <div class="team-image mb-3">
+          <img width="120" height="120" alt="{{ member.title }}" src="{{ member.image | relative_url }}" />
+        </div>
+        {% endif %}
+        <h1 class="title">{{ member.title }}</h1>
+        {% if member.jobtitle %}
+        <p class="team-description">{{ member.jobtitle }}</p>
+        {% endif %}
+        <div class="content">
+          {% if page.member_id %}
+            {{ member.content }}
+          {% else %}
+            {{ content }}
+          {% endif %}
+        </div>
       </div>
     </div>
   </div>

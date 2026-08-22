@@ -1,0 +1,46 @@
+<div class="strip" id="team">
+  <div class="container pt-6 pb-6 pb-md-4">
+    <div class="row">
+      {% assign promoted_teams = site.team | where: "promoted", true | sort: "weight" %}
+      {% for member in promoted_teams %}
+      <div class="col-12 col-md-6 mb-2">
+        <div class="team team-summary team-summary-large">
+          {% if member.image %}
+          <div class="team-image">
+            <img width="90" height="90" alt="{{ member.title }}" class="img-fluid mb-2" src="{{ member.image | relative_url }}" />
+          </div>
+          {% endif %}
+          <div class="team-meta">
+            <h2 class="team-name">
+              <a href="{{ '/about/' | append: member.slug | append: '/' | relative_url }}">{{ member.title }}</a>
+            </h2>
+            <p class="team-description">{{ member.jobtitle }}</p>
+            {% if member.linkedinurl %}
+            <a target="_blank" href="{{ member.linkedinurl }}" rel="noreferrer">LinkedIn</a>
+            {% endif %}
+          </div>
+          <div class="team-content">{{ member.content | truncate: 250 }}</div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    <div class="row pt-6 pb-6">
+      {% assign teams = site.team | where: "promoted", false | sort: "weight" %}
+      {% for member in teams %}
+      <div class="col-12 col-md-4 mb-3">
+        <div class="team team-summary">
+          {% if member.image %}
+          <div class="team-image">
+            <img width="60" height="60" alt="{{ member.title }}" class="img-fluid mb-2" src="{{ member.image | relative_url }}" />
+          </div>
+          {% endif %}
+          <div class="team-meta">
+            <h2 class="team-name">{{ member.title }}</h2>
+            <p class="team-description">{{ member.jobtitle }}</p>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
