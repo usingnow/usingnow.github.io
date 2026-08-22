@@ -10,7 +10,8 @@ intro_image_absolute: true
 show_call_box: true
 ---
 
-# FDE · 驻场 AI 落地外包团队
+# 适配中国环境的<br>驻场 AI 落地团队
+## FDE · Forward Deployed Engineer
 
 <strong class="text-primary">采恪智创工作室 / UsingNow·AI</strong> 成立于 2010 年，成员是一群 IT 服务从业多年的老兵。
 我们喜欢**开源文化**、热衷**前沿技术**、追求**精益管理**。
